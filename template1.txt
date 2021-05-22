@@ -1,0 +1,796 @@
+﻿<DOCTYPE html>
+<html>
+<head>
+	<title>TASK 3</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style type="text/css">
+	*{
+	margin: 0 auto;
+	padding: 0 auto;
+	box-sizing: border-box;
+}
+body {
+	margin: auto;
+	
+}
+.Green-line {
+	background-color: #81b214;
+	height: 7px;
+
+}
+.Green-line p {
+	color: black;
+
+}
+header {
+	background: white;
+
+}
+.fa-rotate-45 {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.fa-stack:hover {
+	color: #DC143c;
+}
+
+.social-media {
+	float: right;
+	background: #81b214;
+	padding: 5px 20px 15px 20px;
+	margin-right: 60px;
+	border-radius: 0 0 25px 25px;
+	margin-bottom: 0px;
+}
+.social-media span {
+	padding: 3px 35px;
+}
+.logo {
+	margin-left: 40px;
+}
+.logo h2{
+	font-size: 75px;
+	font-weight: lighter;
+}
+.logo p{
+	font-size: 30px;
+	color: grey;
+}
+.links {
+	float: right;
+	display: block; 
+	margin-right: 45px;
+	color: #81b214;
+	font-size: 25px;
+	font-weight: lighter;
+	font-family: inherit;
+	position: relative;
+	cursor: pointer;
+
+}
+.links i {
+	text-decoration: none;
+}
+.nav-bar {
+	margin: auto; 
+
+}
+.nav-bar input[type="checkbox"] {
+	background: #81b214;
+	background-size: cover;
+}
+.checkbtn {
+	font-size: 30px;
+	float: left;
+	cursor: pointer;
+	display: none;
+}
+#check{
+	display: none;
+}
+.nav-bar ul {
+	width: 100%;
+	position: absolute;
+	display: flex;
+	margin-top: 80px;
+	list-style: none;
+	padding: 25px;
+	background: #81b214;
+	background-size: cover;
+	color: #fff;
+	font-size: 22px;
+}
+.nav-bar ul li {
+	padding: 10px 10px;
+
+}
+.nav-bar ul li:hover {
+	color: black;
+	cursor: pointer;
+}
+.search-container {
+  float: right;
+  padding-left: 140px;
+  margin-right: 30px;
+}
+
+.nav-bar input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+.search-container button {
+  float: right;
+  padding: 5px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #fff;
+  font-size: 17px;
+  border: none;
+  color: #81b214;
+  cursor: pointer;
+  border: 1px solid black;
+}
+.nav-bar .search-container button:hover {
+  background: #B22222;
+}
+.nav-btn  {
+	text-align: center;
+	justify-content: center;
+	margin: auto;
+	display: inline-flex;
+	margin-top: 50px;
+	margin-left: 620px;
+}
+.nav-btn i {
+	font-size: 40px;
+	padding: 1px 20px 1px 20px;
+	flex: 1;
+	float: right;
+
+}
+.navigation{
+  position: relative;
+  margin: 10px 1px 10px 1px;
+  display: flex;
+}
+.bar{
+  width: 15px;
+  height: 15px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+  background: black;
+}
+.bar:hover{
+  background: white;
+}
+.showSlide {  
+            display: none;
+        }  
+            
+ .showSlide img {  
+     width: 100%; 
+     margin-top: 100px;
+     margin-bottom: 10px;
+     border: 10px solid #fff;    
+      }             
+      
+       .slidercontainer {
+           padding-left: 40px; 
+           padding-right: 40px;  
+           width:  100%;
+           position: relative;  
+           background-color: rgba(0,0,0,0.1);
+           margin-top: 230px; 
+        }
+
+        .left, .right {  
+            cursor: pointer;  
+            position: absolute;  
+            top: 50%;  
+            width: auto;  
+            padding-left: 640px;  
+            margin-top: 190px;  
+            color: black;  
+            font-weight: bold;  
+            font-size: 18px;  
+            transition: 0.6s ease;       
+        }  
+        .right {  
+            right: 0;  
+             margin-top: 190px;
+            padding-right: 690px; 
+        }
+        
+        .dot {
+             cursor: pointer;
+             height: 15px;
+             width: 15px;
+             margin-top: 20px;
+             margin-bottom: 90px;
+             background-color: black;
+            border-radius: 50%;
+            display: inline-block; 
+           transition: background-color 0.6s ease;
+         }
+
+        .dot:hover {
+         background-color: white;
+           }
+     
+        .fade {  
+            -webkit-animation-name: fade;  
+            -webkit-animation-duration: 1.5s;  
+            animation-name: fade;  
+            animation-duration: 1.5s;
+        }  
+        @-webkit-keyframes fade {  
+            from {  
+                opacity: .6 
+            }  
+            to {  
+                opacity: 1  
+            }  
+        }  
+  
+        @keyframes fade {  
+            from {  
+                opacity: .6}  
+            to {  
+                opacity: 1}  
+        }
+       .brand {
+	display: flex;
+	margin: 50px;
+	padding: 75px;
+	text-align: center;
+}
+.brand1 i {
+	font-size: 100px;
+	padding: 15px;
+}
+.brand1 h2 {
+	font-size: 35px;
+	padding: 35px;
+	color: #81b214;
+}
+.small-line p {
+	margin: auto;
+	width: 900px;
+}
+.brand1 p {
+	padding: 10px 10px 25px 25px;
+	size: cover;
+	float: left;
+	flex: 1;
+	font-size: 20px;
+}
+hr {
+	width: 98%;
+}
+.brandh {
+	display: flex;
+	margin: 50px;
+	padding:75px;
+	text-align: center;
+}
+.brandh img {
+	width: 90%;
+	border: 5px solid white;
+	box-shadow: 1px 1px 3px;
+	opacity: 0.8;
+	display: block;
+	clear: both;
+}
+.brand2 h3 {
+	font-size: 25px;
+	padding: 18px;
+	text-align: justify;
+  	-moz-text-align-last: left;
+  	text-align-last: left;
+  	float: left;
+	margin: auto;
+	display: inline-flex;
+}
+.brand2 p {
+	padding: 10px 10px 25px 25px;
+	size: cover;
+	float: left;
+	flex: 1;
+	text-align: justify; 
+  	-moz-text-align-last: left; 
+  	text-align-last: left;
+}
+
+.brand2 i {
+	margin:auto;
+	padding: 4px;
+	float: right;
+	display: flex;
+	color: #81b214;
+}
+.brand2 a {
+	text-decoration: none;
+	position: relative;
+	color: #81b214;
+	display: flex;
+	font-size: 20px;
+	float: right;
+}
+.brand2 a:hover {
+	font-weight: bold;
+}
+footer {
+	margin: auto;
+	padding: auto;
+	background: #363636;	
+}
+.footer {
+	display: flex;
+	color: #d8d3cd;
+	padding: 25px;
+}
+.footer ul {
+	list-style: none;
+	padding: 10px;
+}
+.footer h3 {
+	font-size: 30px;
+	color: #797a7e;
+	padding: 7px;
+}
+.footHead {
+	font-size: 30px;
+	color: #797a7e;	
+}
+.foot1 .foot2 .foot3 .foot4 li{
+	margin: auto;
+	flex: 1;
+	font-size: 18px;
+	color: #d8d3cd;
+	width: 20%;
+}
+.foot2 {
+	width: 20%;
+}
+.foot2 li {
+	padding: 5px;
+}
+.foot2 hr {
+	width: 98 %;
+	opacity: 0.2;
+}
+.foot3 a {
+	text-decoration: none;
+	position: relative;
+	color: #81b214;
+	display: flex;
+	font-size: 18px;
+	float: right;
+}
+.foot3 i {
+	margin:auto;
+	padding: 5px;
+	float: right;
+	display: flex;
+	
+	color: #81b214;
+}
+.foot4 {
+	display: block;
+}
+.foot4 li  {
+	padding: 10px;
+	
+	color: #fff;
+}
+.foot4 input[type=text] {
+	width: 100%;
+	height: 35px;
+	color: #fff;
+	border: none;
+	font-size: 20px;
+	padding: 10px;
+	border-radius: 8px;
+
+}
+.foot4 button {
+	border: none;
+	opacity: 1;
+	color: #81b214;
+	font-size: 20px; 
+}
+.bottom h1 {
+	padding: 10px 70px 10px 70px;
+	opacity: 0.8;
+}
+
+@media screen and (max-width:673px) {
+	body {
+		font-size: 20px;
+		margin: auto;
+	}
+	.Green-line {
+		width: 100%;
+	}
+	.social-media {
+		width: 100%;
+		float: none;
+		display: flex;
+		position: relative;
+	}
+	.logo h2 {
+		margin-top: 20px;
+		font-size: 40px;
+		
+	}
+	.logo p {
+		margin-top: 25px;
+		font-size: 19px;
+	}
+	.links {
+		padding: 10px;
+		margin-left: 30px;
+		margin-top: 50px;
+		margin-bottom: 10px;
+		margin-right: 20px;
+		padding: 0;
+		font-size: 17px;
+		float: left;
+		
+	}
+	.nav-bar {
+		width: 100%;
+		height: 10px;
+		margin:0px;
+		padding: 0px;
+	}
+	.search-container {
+		float: left;
+		display: flex;
+		margin: 0;
+		margin-left: 10px:
+		padding: 10px;
+	}
+	.nav-bar input[type=text] {
+		flex: 1;
+		font-size: 11.5px;
+	}
+	.search-container button {
+		flex: 1;
+		font-size: 11.5px;
+	}
+	.nav-bar i {
+		margin: auto;
+		padding: 1px;
+		position: absolute;
+		font-size: 30px;
+	}
+	.Green-line p {
+		display: none;
+	}
+	 
+        @media only screen and (max-width: 360px) {
+        	.showSlide img {  
+                width: 100%; 
+                height: 100%;
+               
+            }
+         .slideshow-container {
+		    margin-top: 10px;
+	      }
+	      .left{
+	      	
+	      	padding-left: 5px;
+	      	margin-top: 190px;
+	      }
+	      .right{
+	      	padding-right: 5px;
+	      	margin-top: 190px;
+	      }
+	      }
+	.brand {
+		display: grid;
+		margin: 5px;
+		padding: 5px;
+	}
+	.brandh {
+		display: grid;
+		margin: 5px;
+		padding: 5px;
+		margin-top: 50px;
+	}
+	.brandh img {
+		margin-top: 50px;
+	}
+	.footer {
+		display: grid;
+		margin: 5px;
+		padding: 5px;
+	}
+	.foot2 {
+		width: 80%;
+	}
+	.nav-btn  {
+		margin-left: 25px;
+	}
+	.bottom h1 {
+		padding: 20px 22px 20px 18px;
+	}
+	.checkbtn i {
+		padding: 5px;
+		margin: 25px;
+		font-size: 20px;
+	}
+	.checkbtn {
+		left: 0;
+		float: left;
+		position: absolute;
+		margin-left: 50px;
+		margin-top: 90px;
+		background: #81b214;
+		background-size: cover;
+		display: block;
+	}
+	.nav-bar ul {
+		width: 100%;
+		height: 400px;
+		background: #81b214;
+		top: 250px;
+		left: -100%;
+		display: block;
+		text-align: right;
+		margin: 0px;
+		transition: all 0.5s;
+		float: right;
+
+	}
+	.nav-bar ul li {
+		font-size: 15px;
+		font-weight: bold;
+		text-align: center;
+	}
+	#check:checked ~ ul{
+		left: 0;
+	}
+
+}
+
+</style>
+</head>
+<body>
+	<div class="Green-line">
+		<p>.</p>
+	</div>
+	<header>
+		<div class="social-media">
+			<span class="fa-stack fa-lg">
+			  <i class="fa fa-circle fa-stack-2x"></i>
+			  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+			</span>
+			<span class="fa-stack fa-lg">
+			  <i class="fa fa-circle fa-stack-2x"></i>
+			  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+			</span>
+			<span class="fa-stack fa-lg">
+			  <i class="fa fa-circle fa-stack-2x" ></i>
+			  <i class=" fa fa-pinterest fa-stack-1x fa-inverse"></i>
+			</span>
+			<span class="fa-stack fa-lg">
+			  <i class="fa fa-circle fa-stack-2x"></i>
+			  <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+			</span>
+			<span class="fa-stack fa-lg">
+			  <i class="fa fa-circle fa-stack-2x"></i>
+			  <i class="fa fa-wifi fa-rotate-45 fa-stack-1x fa-inverse"></i>
+			</span>
+		</div>
+
+		<div class="logo">
+			<img src="">
+			<h2>COMPANY LOGO</h2>
+			<p>TAG LINE</p>
+		</div>
+        <div class="links">
+				<a >Sign Up</a>
+                |
+                <a >Login</a>
+                |
+                <a >RSS Feeds</a>
+                |
+                <a >Archived News</a>
+               </p>
+		</div>
+	</header>
+	
+	<div class="nav-bar">
+			<input type="checkbox" id="check">
+					<label for="check" class="checkbtn">
+						<i class="fa fa-bars" style="padding: 10px;">Menu</i>
+					</label>
+			<ul id="nav-lists">
+				<input type="checkbox" id="check">
+					<label for="check" class="checkbtn">
+						<i class="fa fa-close"></i>
+					</label>
+				<li href="#home">HOME</li>
+				<li href="#home">ABOUT US</li>
+				<li href="#home">SERVICES</li>
+				<li href="#home">PORTFOLIO</li>
+				<li href="#home">GALLERY</li>
+				<li href="#home">CONTACT US</li>
+				<div class="search-container">
+				    <form action="/action_page.php">
+				      <input type="text" placeholder="Search Our Website..." name="search">
+				      <button type="submit">SEARCH</button>
+				    </form>
+  				</div>
+			</ul>
+		</div>
+          
+          <div class="slidercontainer">  
+        <div class="showSlide fade"> 
+
+            <img src="img/12.jpg" style="height: 360px">  
+            </div> 
+        <div class="showSlide fade">        
+            <img src="img/20.jpg" style="height: 360px">  
+        </div>  
+  
+        <div class="showSlide fade">  
+            <img src="img/18.jpg" style="height: 360px">   
+        </div>  
+        <div class="showSlide fade">  
+            <img src="img/15.jpg" style="height: 360px">  
+        </div>  
+        <div class="showSlide fade">  
+            <img src="img/11.jpg" style="height: 360px">  
+        </div>
+        <a class="left" onclick="nextSlide(-1)"> <i class="fa fa-chevron-circle-left" aria-hidden="true"></i></a>      
+    
+    <div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+   <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+  </div>
+<a class="right" onclick="nextSlide(1)"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+</a> 
+</div>
+
+    <script type="text/javascript">  
+        var slide_index = 1;  
+        displaySlides(slide_index);  
+        function nextSlide(n) {  
+            displaySlides(slide_index += n);  
+        }  
+        function currentSlide(n) {  
+            displaySlides(slide_index = n);  
+        }  
+        function displaySlides(n) {  
+            var i;  
+            var slides = document.getElementsByClassName("showSlide");  
+            if (n > slides.length) { slide_index = 1 }  
+            if (n < 1) { slide_index = slides.length }  
+            for (i = 0; i < slides.length; i++) {  
+                slides[i].style.display = "none";  
+            }  
+            slides[slide_index - 1].style.display = "block";  
+        }  
+</script>
+<section>
+		<div class="brand">
+			<div class="brand1">
+				<i class="fa fa-users" aria-hidden="true" style="color: red"></i>
+				<h2>vrdstufh</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+			</div>
+			<div class="brand1">
+				<i class="fa fa-globe" aria-hidden="true" style="color: orange"></i>
+				<h2>vrdstufh</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+			</div>
+			<div class="brand1">
+				<i class="fa fa-cogs" aria-hidden="true" style="color: green"></i>
+				<h2>vrdstufh</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+			</div>
+			<div class="brand1">
+				<i class="fa fa-leaf" aria-hidden="true" style="color:lightblue"></i>
+				<h2>vrdstufh</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+			</div>
+		</div>
+	</section> 
+	<hr>
+	<section>
+		<div class="brandh">
+			<div class="brand2">
+				<img src="img/42.jpg">
+				<h3>Project Title</h3>
+				<p>This product is meant for educational purposes only. Any resemblance to real persons, living or dead is purely coincidental. Void where prohibited. Some assembly required. List each check separately by bank number. Batteries not included.Contents may settle during shipment. Use only as directed. No other warranty expressed or implied.Do not use while operating a motor vehicle or heavy equipment. Postage will be paid by addressee. Subject to CARB approval.
+					<br><br><i class="fa fa-angle-double-right" aria-hidden="true" style="font-size: 15px"></i><a href="#">View Details</a></p>
+				
+			</div>
+			<div class="brand2">
+				<img src="img/32.jpg">
+				<h3>Project Title</h3>
+				<p>This product is meant for educational purposes only. Any resemblance to real persons, living or dead is purely coincidental. Void where prohibited. Some assembly required. List each check separately by bank number. Batteries not included.Contents may settle during shipment. Use only as directed. No other warranty expressed or implied.Do not use while operating a motor vehicle or heavy equipment. Postage will be paid by addressee. Subject to CARB approval.<br><br>
+					<i class="fa fa-angle-double-right" aria-hidden="true" style="font-size: 15px"></i><a href="#">View Details</a></p>
+				
+			</div>
+			<div class="brand2">
+				<img src="img/jpg.jpg">
+				<h3>Project Title</h3>
+				<p>This product is meant for educational purposes only. Any resemblance to real persons, living or dead is purely coincidental. Void where prohibited. Some assembly required. List each check separately by bank number. Batteries not included.Contents may settle during shipment. Use only as directed. No other warranty expressed or implied.Do not use while operating a motor vehicle or heavy equipment. Postage will be paid by addressee. Subject to CARB approval.<br><br><i class="fa fa-angle-double-right" aria-hidden="true" style="font-size: 15px"></i><a href="#">View Details</a></p>
+			</div>
+			<div class="brand2">
+				<img src="img/19.jpg">
+				<h3>Project Title</h3>
+				<p>This product is meant for educational purposes only. Any resemblance to real persons, living or dead is purely coincidental. Void where prohibited. Some assembly required. List each check separately by bank number. Batteries not included.Contents may settle during shipment. Use only as directed. No other warranty expressed or implied.Do not use while operating a motor vehicle or heavy equipment. Postage will be paid by addressee. Subject to CARB approval.<br><br><i class="fa fa-angle-double-right" aria-hidden="true" style="font-size: 15px"></i><a href="#">View Details</a></p>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="footer">
+			<div class="foot1">
+				
+				<ul>
+					<li class="footHead">Contact Details</li><br>
+					<li>This product is meant for educational purposes only.<br>Void where prohibited. Some assembly required. <br>
+					 Some assembly required.<br> List each check separately by bank number.</li><br><br>
+					<li>Tele:XXX XXXX</li>
+
+					<li>FAX:xxx xxx xxx x</li>
+					<li>Email:contact@mydomain.com</li>
+				</ul>
+			</div>
+			<div class="foot2">
+				
+				<ul>
+					<li class="footHead">Quick Links</li><br>
+					<li>Link Text Here</li><hr>
+					<li>Link Text Here</li><hr>
+					<li>Link Text Here</li><hr>
+					<li>Link Text Here</li><hr>
+				</ul>
+			</div>
+			<div class="foot3">
+				<ul>
+				<li class="footHead">From The Blog</li>
+				<br>
+				<li style="font-size: 20px; padding:2px;">Blog Post Title</li>
+				<li>This product is meant for educational purposes only.<br>Void where prohibited. Some assembly required. <br>
+					Some assembly required.<br> List each check separately by bank number.<br><br>
+						<i class="fa fa-angle-double-right" aria-hidden="true" style="font-size: 15px"></i><a href="#">Read More</a></li>
+					</ul>
+			</div>
+			<div class="foot4">
+				<ul>
+					<li style="font-size: 30px;color: #797a7e; padding: 5px;">Grab Our Newsletter</li>
+					<li><input type="text" placeholder="Name" name="" style="background: #1b1919;"><br></li>
+					<li><input type="text" placeholder="Email" name=""style="background: #1b1919;"><br></li>
+					<li>
+						<button type="submit" style="background: #000; padding: 5px 10px 5px 10px; border-radius:5px;">
+					Submit</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="bottom">
+			<h1 style="background: #000; color: #797a7e; font-size: 15px; font-weight: lighter; background-size: cover;">Copyright © 2020: All Rights Reserved-Domain Name</h1>
+		</div>
+	</footer>
+	
+</body>
+</html>
